@@ -18,8 +18,8 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
 public class Mail {
-    private String username = "chedi.lahmer9@gmail.com";
-    private String password = "3345wael20";
+    private String username = "george@cerone@gmail.com";
+    private String password = "passwordrandom123";
     @FXML
     private Button bsubmit;
     @FXML
