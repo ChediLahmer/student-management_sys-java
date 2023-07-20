@@ -1,0 +1,200 @@
+@startuml
+class com.example.dualist.Responsablepage {
+~ Stage stage
+- Scene scene
+- Button bimprimer
+- Parent root
+- Connection con
+- BorderPane mainpane
+~ void gomainpage(ActionEvent)
++ void getpage(String)
+~ void annulerabsence(ActionEvent)
+~ void envoyermail(ActionEvent)
+~ void generergraphe(ActionEvent)
+~ void imprimerabsences(ActionEvent)
+~ void printaction(ActionEvent)
+}
+class com.example.dualist.Enseignantpage {
+~ Stage stage
+- Scene scene
+- Parent root
+- BorderPane mainpany
+~ void mapage(ActionEvent)
++ void getpagy(String)
+~ void imprimerabsence(ActionEvent)
+~ void insertedabsence(ActionEvent)
+}
+class com.example.dualist.Mainapp {
++ void start(Stage)
+~ void cancel(Stage)
++ {static} void main(String[])
+}
+class com.example.dualist.Voirtable {
+- Connection con
+- TableColumn<babsence,Date> fccdate
+- TableColumn<babsence,Integer> fccidenseignant
+- TableColumn<babsence,Integer> fccidetudiant
+- TableColumn<babsence,Integer> fccidmatiere
+- TableColumn<babsence,Integer> fccnumseance
+- TableView<babsence> tableabscence1
+- ObservableList<babsence> dataa
++ void initialize(URL,ResourceBundle)
+- void setCellTable()
+- void loadData()
+}
+class com.example.dualist.babsence {
+- int idenseignant
+- int idetudiant
+- int idmatiere
+- int numseance
+- LocalDate date
++ int getIdetudiant()
++ void setIdetudiant(int)
++ int getIdenseignant()
++ void setIdenseignant(int)
++ int getIdmatiere()
++ void setIdmatiere(int)
++ int getNumseance()
++ void setNumseance(int)
++ LocalDate getDate()
++ void setDate(LocalDate)
+}
+class com.example.dualist.SceneController {
+- ObservableList<babsence> data
+- Connection con
+- Button bcancel
+- RadioButton benseignant
+- RadioButton betudiant
+- RadioButton bresponsable
+- TextField insertedid
+- TextField insertedpassword
+- ToggleGroup role
+- Label whoareyou
+~ Stage stage
+- Scene scene
+- Parent root
+- PreparedStatement pst
+- ResultSet rs
+- AnchorPane scenepane
+~ void getrole(ActionEvent)
+~ void myid(ActionEvent)
+~ void mypassword(ActionEvent)
++ void initialize(URL,ResourceBundle)
+~ void login(ActionEvent)
+~ void cancel(ActionEvent)
+}
+class com.example.dualist.main1 {
++ {static} void main(String[])
+}
+class com.example.dualist.Adddabsence {
+- Stage stage
+- Scene scene
+- Parent root
+- Connection con
+- PreparedStatement pst
+- ResultSet rs
+- Button badd
+- TextField ffdate
+- TextField ffidenseignant
+- TextField ffidetudiant
+- TextField ffidmatiere
+- TextField ffnumseance
++ void initialize(URL,ResourceBundle)
+~ void add(ActionEvent)
+~ void insertdate(ActionEvent)
+~ void insertidenseignant(ActionEvent)
+~ void insertidetudiant(ActionEvent)
+~ void insertidmatiere(ActionEvent)
+~ void insertnumseance(ActionEvent)
+}
+class com.example.dualist.Graphe {
+- Connection con
+- PreparedStatement ps
+- ResultSet rs
+- BarChart<?,?> barchart
+- AnchorPane mainform
++ void initialize(URL,ResourceBundle)
++ void chart()
+}
+class com.example.dualist.connect {
++ {static} Connection bdConnection()
+}
+class com.example.dualist.Mail {
+- String username
+- String password
+- Button bsubmit
+- TextField badress
+- TextField bobject
+- TextField bbody
+~ void insertadress(ActionEvent)
+~ void insertobject(ActionEvent)
+~ void submit(ActionEvent)
+}
+class com.example.dualist.Updateabsence {
+- Stage stage
+- Scene scene
+- Parent root
+- Connection con
+- PreparedStatement pst
+- ResultSet rs
+- Button bdelete
+- TextField fdate
+- TextField fidenseignant
+- TextField fidetudiant
+- TextField fidmatiere
+- TextField fnumseance
++ void initialize(URL,ResourceBundle)
+~ void insertdate(ActionEvent)
+~ void insertidenseignant(ActionEvent)
+~ void insertidetudiant(ActionEvent)
+~ void insertidmatiere(ActionEvent)
+~ void insertnumseance(ActionEvent)
+~ void delete(ActionEvent)
+}
+class com.example.dualist.Etudselect {
+~ Stage stage
+- Scene scene
+- Parent root
+- Connection con
+- Button bafficherregistre
+- TableColumn<babsence,Date> ccdate
+- TableColumn<babsence,Integer> ccidenseignant
+- TableColumn<babsence,Integer> ccidetudiant
+- TableColumn<babsence,Integer> ccidmatiere
+- TableColumn<babsence,Integer> ccnumseance
+- TableView<babsence> tableabscence
+- ObservableList<babsence> data
+~ void notrepage(ActionEvent)
+~ void afficheregistre(ActionEvent)
++ void initialize(URL,ResourceBundle)
+- void setCellTable()
+- void loadData()
+}
+class com.example.dualist.Printyy {
+- TableColumn<babsence,LocalDate> ddate
+- TableColumn<babsence,Integer> didenseignant
+- TableColumn<babsence,Integer> didetudiant
+- TableColumn<babsence,Integer> didmatiere
+- TableColumn<babsence,Integer> didnumseance
+- TableView<babsence> arrayab
+- Connection con
+- ObservableList<babsence> data
+- Button printButton
++ void initialize(URL,ResourceBundle)
+- void printTable(ActionEvent)
+- void initialize()
+- void setCellTable()
+- void loadData()
+- void printTableView(TableView<babsence>)
+}
+
+
+javafx.application.Application <|-- com.example.dualist.Mainapp
+javafx.fxml.Initializable <|.. com.example.dualist.Voirtable
+javafx.fxml.Initializable <|.. com.example.dualist.SceneController
+javafx.fxml.Initializable <|.. com.example.dualist.Adddabsence
+javafx.fxml.Initializable <|.. com.example.dualist.Graphe
+javafx.fxml.Initializable <|.. com.example.dualist.Updateabsence
+javafx.fxml.Initializable <|.. com.example.dualist.Etudselect
+javafx.fxml.Initializable <|.. com.example.dualist.Printyy
+@enduml

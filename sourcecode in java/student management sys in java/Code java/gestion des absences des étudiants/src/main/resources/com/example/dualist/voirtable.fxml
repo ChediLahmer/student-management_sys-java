@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="scenepane1" prefHeight="672.0" prefWidth="710.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dualist.Voirtable">
+   <children>
+      <TableView fx:id="tableabscence1" layoutY="9.0" prefHeight="690.0" prefWidth="710.0">
+        <columns>
+          <TableColumn fx:id="fccidetudiant" prefWidth="145.60003662109375" text="idetudiant" />
+          <TableColumn fx:id="fccidenseignant" prefWidth="141.5999755859375" text="idenseignant" />
+            <TableColumn fx:id="fccidmatiere" prefWidth="110.4000244140625" text="idmatiere" />
+            <TableColumn fx:id="fccnumseance" prefWidth="119.2000732421875" text="numseance" />
+            <TableColumn fx:id="fccdate" prefWidth="199.19989013671875" text="date" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

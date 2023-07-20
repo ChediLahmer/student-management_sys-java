@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="698.0" prefWidth="605.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dualist.Printyy">
+   <children>
+      <TableView fx:id="arrayab" prefHeight="698.0" prefWidth="376.0">
+        <columns>
+          <TableColumn fx:id="didetudiant" prefWidth="75.0" text="idetudiant" />
+          <TableColumn fx:id="didenseignant" prefWidth="75.0" text="idenseignant" />
+            <TableColumn fx:id="didmatiere" prefWidth="75.0" text="idmatiere" />
+            <TableColumn fx:id="didnumseance" prefWidth="75.0" text="numseance" />
+            <TableColumn fx:id="ddate" prefWidth="75.0" text="date" />
+        </columns>
+      </TableView>
+      <Button fx:id="printButton" layoutX="526.0" layoutY="650.0" mnemonicParsing="false" onAction="#printTable" prefHeight="26.0" prefWidth="64.0" text="confirm" />
+   </children>
+</AnchorPane>

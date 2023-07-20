@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="720.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dualist.Etudselect">
+   <children>
+      <ImageView fitHeight="720.0" fitWidth="880.0">
+         <image>
+            <Image url="@../../../../../../../../Users/fahdl/Downloads/322725651_900501004297522_492367433386955979_n%20(1).png" />
+         </image>
+      </ImageView>
+      <AnchorPane prefHeight="406.0" prefWidth="162.0">
+         <children>
+            <Button fx:id="bafficherregistre" layoutX="31.0" layoutY="255.0" mnemonicParsing="false" onAction="#afficheregistre" prefHeight="26.0" prefWidth="107.0" text="absence list" />
+            <Button layoutX="47.0" layoutY="366.0" mnemonicParsing="false" onAction="#notrepage" text="mainpage" />
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tableabscence" layoutX="171.0" layoutY="11.0" prefHeight="700.0" prefWidth="699.0">
+        <columns>
+          <TableColumn fx:id="ccidetudiant" prefWidth="101.60006713867188" text="idetudiant" />
+          <TableColumn fx:id="ccidenseignant" prefWidth="113.59991455078125" text="idenseignant" />
+            <TableColumn fx:id="ccidmatiere" prefWidth="115.99993896484375" text="idmatiere" />
+            <TableColumn fx:id="ccnumseance" prefWidth="177.59994506835938" text="numseance" />
+            <TableColumn fx:id="ccdate" prefWidth="206.39996337890625" text="date" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

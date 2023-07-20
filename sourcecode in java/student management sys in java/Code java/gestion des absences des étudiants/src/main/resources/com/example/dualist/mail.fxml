@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="720.0" prefWidth="718.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dualist.Mail">
+   <children>
+      <ImageView fitHeight="720.0" fitWidth="720.0">
+         <image>
+            <Image url="@../../../../../../../../Users/fahdl/Downloads/321745187_923995118759304_4394525510872394794_n%20(1).png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="badress" layoutX="200.0" layoutY="236.0" onAction="#insertadress" prefHeight="26.0" prefWidth="231.0" promptText="adress" />
+      <TextField fx:id="bobject" layoutX="200.0" layoutY="312.0" onAction="#insertobject" prefHeight="26.0" prefWidth="231.0" promptText="object" />
+      <Button fx:id="bsubmit" layoutX="278.0" layoutY="444.0" mnemonicParsing="false" onAction="#submit" prefHeight="26.0" prefWidth="108.0" text="submit" />
+      <TextField fx:id="bbody" layoutX="200.0" layoutY="387.0" prefHeight="26.0" prefWidth="231.0" promptText="body" />
+   </children>
+</AnchorPane>
